@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: #edf3fa; /* Blanc givré bleuté neumorphique doux */
+    --foreground: #0f172a; /* Bleu nuit profond */
+    --card: #ffffff;
+    --card-gradient: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);
+    --card-elevated: #f4f8fd;
+    --primary: #2563eb; /* Bleu Royal Électrique officiel */
+    --primary-foreground: #ffffff;
+    --secondary: #e8f0fe;
+    --muted: #dbe7f6;
+    --muted-foreground: #5a6e85;
+    --border: #d2e0f2;
+    --bordeaux-brand: #2563eb; /* Remplacé par Bleu Royal comme demandé */
+    --blue-brand: #2563eb;
+    --bordeaux-glow: rgba(37, 99, 235, 0.18);
+    --blue-glow: rgba(37, 99, 235, 0.22);
+  }
+
+  .dark {
+    --background: #080d1a; /* Noir saphir nuit d'obsidienne */
+    --foreground: #f1f6fd;
+    --card: #0f172a;
+    --card-gradient: linear-gradient(180deg, #131d36 0%, #0b1120 100%);
+    --card-elevated: #16223d;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #17243e;
+    --muted: #1e3052;
+    --muted-foreground: #8fa5c2;
+    --border: #1e3150;
+    --bordeaux-brand: #60a5fa;
+    --blue-brand: #60a5fa;
+    --bordeaux-glow: rgba(59, 130, 246, 0.32);
+    --blue-glow: rgba(59, 130, 246, 0.35);
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* PayNova Luminous Royal Blue Gradients & Shadows (Image Style) */
+.bg-money-gradient, .bg-bordeaux-gradient, .bg-blue-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 45%, #1d4ed8 80%, #1e40af 100%);
+}
+
+.bg-blue-glow, .bg-bordeaux-glow {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.32) 0%, rgba(37, 99, 235, 0) 70%);
+}
+
+.bg-card-gradient {
+  background: var(--card-gradient);
+}
+
+.bg-card-elevated {
+  background: var(--card-elevated);
+}
+
+.shadow-bordeaux, .shadow-blue, .shadow-emerald {
+  box-shadow: 0 12px 32px -5px rgba(37, 99, 235, 0.42);
+}
+
+.shadow-neumorphic {
+  box-shadow: 
+    0 10px 25px -5px rgba(37, 99, 235, 0.08),
+    0 8px 16px -6px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.dark .shadow-neumorphic {
+  box-shadow: 
+    0 12px 30px -5px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(37, 99, 235, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.shadow-card {
+  box-shadow: 0 8px 30px -4px rgba(37, 99, 235, 0.08);
+}
+
+.dark .shadow-card {
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.75);
+}
+
+.text-gold {
+  color: #fbbf24;
+}
+
+.text-bordeaux-brand, .text-blue-brand, .text-emerald-brand {
+  color: var(--blue-brand);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.privacy-masked-name {
+  letter-spacing: 0.05em;
+}
+
+@keyframes floatUpGain {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 8px) scale(0.85);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -8px) scale(1.08);
+  }
+  35% {
+    transform: translate(-50%, -10px) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -22px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -34px) scale(0.95);
+  }
+}

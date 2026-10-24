@@ -1,0 +1,6 @@
+{
+  "name": "PayNova",
+  "description": "PayNova — Plateforme officielle de micro-missions rémunérées. 45 vidéos quotidiennes = 250 F CFA par jour, 750 F CFA offerts dès le départ. Retraits sécurisés dès 45 000 F CFA par Mobile Money, Virement bancaire et Cryptomonnaie.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

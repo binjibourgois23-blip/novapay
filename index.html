@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>PayNova — Plateforme officielle de micro-missions rémunérées</title>
+    <meta name="description" content="PayNova — Plateforme officielle de micro-missions rémunérées. 45 vidéos quotidiennes = 250 F CFA par jour, 750 F CFA offerts dès le départ. Retraits sécurisés dès 45 000 F CFA par Mobile Money, Virement bancaire et Cryptomonnaie." />
+    <meta property="og:title" content="PayNova — Plateforme officielle de micro-missions rémunérées" />
+    <meta property="og:description" content="PayNova : Gagnez chaque jour en visionnant des publicités sponsorisées. Solde de départ offert : 750 F CFA. Retraits dès 45 000 F CFA par Mobile Money, Virement Bancaire & Crypto." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('paynova_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (saved !== 'light' && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="antialiased font-sans selection:bg-[#be123c] selection:text-white overflow-x-hidden transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "summary":  "Plan d'implémentation pour le nouveau composant FAQView avec navigation intégrée.\nDéfinit l'architecture des questions fréquentes organisées par catégories (Validation des tâches, Délais de paiement, Intégration Mobile Money, Parrainage et Sécurité), le moteur de recherche instantané, le composant accordéon interactif, l'intégration dans la navigation (Header, Menu, Liens contextuels) et le bloc d'assistance WhatsApp.",
+  "updatedAt":  "2026-10-24T09:16:11.967513185Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
